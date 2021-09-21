@@ -63,10 +63,8 @@ from Natsuki.modules.helper_funcs.misc import paginate_modules
 from Natsuki.modules.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """
-👋 𝗛𝗲𝗹𝗹𝗼 𝘁𝗵𝗲𝗿𝗲, 𝗜'𝗺 @TheNatsukiBot
-𝗜'𝗺 𝗮 𝗣𝗼𝘄𝗲𝗿𝗳𝘂𝗹 𝗴𝗿𝗼𝘂𝗽 𝗺𝗮𝗻𝗮𝗴𝗲𝗿 𝗯𝗼𝘁 𝗪𝗶𝘁𝗵 𝗖𝗼𝗼𝗹 𝗠𝗼𝗱𝘂𝗹𝗲𝘀. 𝗠𝗮𝗱𝗲 𝗯𝘆 ⚡️ @TeamNatsuki
-𝗛𝗶𝘁 /help 𝘁𝗼 𝗳𝗶𝗻𝗱 𝗺𝘆 𝗹𝗶𝘀𝘁 𝗼𝗳 𝗮𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀 🙋‍♂️
- 
+👋 Hey There, My Name is 𝗡𝗮𝘁𝘀𝘂𝗸𝗶. 
+I'm a Powerfull Group Manager Bot With Cool Modules. feel free to add me to your groups!
 """
 
 buttons = [
@@ -75,20 +73,20 @@ buttons = [
             text="Natsuki News 🙋‍♂️", url="https://t.me/Natsuki_Updates"
         ),
         InlineKeyboardButton(
-            text="Support Group 💬", url="https://t.me/NatsukiSupport_Official"
+            text="Support Group 👥", url="https://t.me/NatsukiSupport_Official"
         ),
     ],
     [
         InlineKeyboardButton(
-            text="𝚂𝚘𝚞𝚛𝚌𝚎 🗒", url="Github.com/Sadew451"
+            text="Source 📋", url="Github.com/Sadew451"
         ),
         InlineKeyboardButton(
-            text="Command Help ❓", url="http://t.me/TheNatsukiBot?start=help"
+            text="Command Help ❓", callback_data="help_back"
         ),
     ],
     [
         InlineKeyboardButton(
-            text="➕ 𝙰𝚍𝚍 𝙼𝚎 𝚝𝚘 𝚢𝚘𝚞𝚛 𝚐𝚛𝚘𝚞𝚙 ➕",
+            text="➕ Add To Me Your Group ➕",
             url="t.me/TheNatsukiBot?startgroup=true",
         ),
     ],
@@ -97,13 +95,9 @@ buttons = [
 NATSUKI_IMG = "https://telegra.ph/file/a6281ecaae26667a13716.png"
 
 HELP_STRINGS = f"""
-*Main Commands :* [🤖]()
-⁜ /start: Starts me! You've probably already used this.
-⁜ /help: Click this, I'll let you know about myself!
-⁜ /donate: You can support my creater using this command.
-⁜ /settings: 
-   ◔ in PM: will send you your settings for all supported modules.
-   ◔ in a Group: will redirect you to pm, with all that chat's settings.
+*All Commands :* [](иαтѕυкι)
+» Every possibility of Natsuki is documentated here.
+» Click buttons to get Help.
 """.format(
     dispatcher.bot.first_name,
     "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
@@ -112,7 +106,7 @@ HELP_STRINGS = f"""
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 You can donate to the original writer's of the Base code,
-Support them  [Sadew Jayasekara](t.me/Darkridersslk)"""
+Support them  [SADEW JAYASEKARA](t.me/Darkridersslk)"""
 
 IMPORTED = {}
 MIGRATEABLE = []
