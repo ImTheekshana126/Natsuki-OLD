@@ -1,7 +1,7 @@
 {
       "name": "Nutsuki",
       "description": "An Anime themed Telegram group management bot.",
-      "logo": "https://telegra.ph/file/a6281ecaae26667a13716.png",
+      "logo": "https://telegra.ph/file/ba3c6aa767bcc6f775204.jpg",
       "keywords": [
          "telegram",
          "anime",
@@ -124,11 +124,29 @@
          "required": false,
          "value": "1548967589"
       },
+    "VIRUS_API_KEY": {
+      "description": "Cloudmersive api (no need)",
+      "value": "",
+      "required": false
+      
+      },
       "TIGERS": {
          "description": "A space separated list of user IDs who you wanna assign as tiger users.",
          "required": false,
          "value": "1548967589"
       },
+    "BOT_ID": {
+      "description": "Tg bot id by ",
+      "value": "",
+      "required": true
+      
+      },
+    "MONGO_DB_URI": {
+      "description": "Create A Database In Mongodb And Get URL",
+      "value": "",
+      "required": true
+    
+     },
       "WOLVES": {
          "description": "A space separated list of user IDs who you want to assign as whitelisted - can't be banned with your bot.",
          "required": false,
