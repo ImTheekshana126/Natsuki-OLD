@@ -36,7 +36,7 @@
 ## Avaiilable on Telegram as [@TheNatsukiBot](https://t.me/thenatsukibot)
 
 # 🏃‍♂️ Easy Deploy 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Sadew451/Natsuki.git)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Sadew451/Natsuki-OLD.git)
 
 <a href="https://www.youtube.com/channel/UCdSBUUQ1v0_IIElBR_1B72w"><img src="https://img.shields.io/badge/How%20To-Deploy-red.svg?logo=Youtube"></a>
 
@@ -89,6 +89,7 @@ Anything missing kindly let us know at [Natsuki Support](https://t.me/NatsukiSup
 
 #### • SADEW JAYASEKARA    »»  <a href="https://github.com/SADEW451" alt="SADEW451"> <img src="https://img.shields.io/badge/SADEW451-90302f?logo=github" /></a> (OWNER)
 #### • DAMANTHA JASINGHA  »»  <a href="https://github.com/DAMANTHA126" alt="DAMANTHAJASINGHA"> <img src="https://img.shields.io/badge/DAMANTHA126-82CAFA?logo=github" /></a> (DEV)
+
 
 
 
