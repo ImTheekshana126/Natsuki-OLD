@@ -69,36 +69,29 @@ from Natsuki.modules.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """
 👋 Hey There, My Name is 𝗡𝗮𝘁𝘀𝘂𝗸𝗶. 
+
 I'm a Powerfull Group Manager Bot With Cool Modules. feel free to add me to your groups!
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="Natsuki News 🙋‍♂️", url="https://t.me/Natsuki_Updates"
-        ),
-        InlineKeyboardButton(
-            text="Support Group 💬", url="https://t.me/NatsukiSupport_Official"
-        ),
+            text="➕ Add Sophia to your Group ➕", url="t.me/Sophia?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(
-            text="Source 🗒", url="Github.com/Sadew451"
-        ),
-        InlineKeyboardButton(
-            text="Command Help ❓", callback_data="help_back"
-        ),
-    ],
-     [
+        InlineKeyboardButton(text="Source Code 🗒️", callback_data="source_"),
         InlineKeyboardButton(
             text="System Stats 💻", callback_data="stats_callback"
         ),
     ],
     [
+        InlineKeyboardButton(text="🙋‍♀️ Sophia News", url=f"https://t.me/dihanofficial"),
         InlineKeyboardButton(
-            text="➕ Add To Me Your Group ➕",
-            url="t.me/TheNatsukiBot?startgroup=true",
+            text="💬 Support Group", url=f"https://t.me/dihan_official"
         ),
+    ],
+    [
+        InlineKeyboardButton(text="❓ Commands Help ", callback_data="help_back"),
     ],
 ]
 
