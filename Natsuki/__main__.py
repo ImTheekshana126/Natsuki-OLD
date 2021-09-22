@@ -244,7 +244,7 @@ def start(update: Update, context: CallbackContext):
             ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="System Stats", callback_data="stats_callback")]],
+                [[InlineKeyboardButton(text="System Stats", callback_data="help_back")]],
             ),
         )
 
