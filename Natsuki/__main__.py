@@ -76,11 +76,9 @@ I'm a Powerfull Group Manager Bot With Cool Modules. feel free to add me to your
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕ Add Sophia to your Group ➕", url="t.me/Sophia?startgroup=true"),
+            text="➕ Add Sophia to your Group ➕",  url="t.me/TheNatsukiBot?startgroup=true",),
     ],
     [
-        InlineKeyboardButton(text="Source Code 🗒️", callback_data="source_"),
-        InlineKeyboardButton(
             text="System Stats 💻", callback_data="stats_callback"
         ),
     ],
