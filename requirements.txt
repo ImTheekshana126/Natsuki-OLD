@@ -98,4 +98,4 @@ countryinfo
 faker
 PyDictionary
 pykeyboard
-img2pdf
+
