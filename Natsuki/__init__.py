@@ -98,7 +98,8 @@ if ENV:
     OWNER_ID = os.environ.get("OWNER_ID", None)
     OPENWEATHERMAP_ID = os.environ.get("OPENWEATHERMAP_ID", None)
     TIME_API_KEY = os.environ.get("TIME_API_KEY", None)
-
+    bot_start_time = time.time()
+    
     try:
         WHITELIST_CHATS = set(
             int(x) for x in os.environ.get("WHITELIST_CHATS", "").split()
