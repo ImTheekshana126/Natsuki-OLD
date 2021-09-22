@@ -79,6 +79,7 @@ buttons = [
             text="➕ Add Sophia to your Group ➕",  url="t.me/TheNatsukiBot?startgroup=true",),
     ],
     [
+        InlineKeyboardButton(
             text="System Stats 💻", callback_data="stats_callback"
         ),
     ],
