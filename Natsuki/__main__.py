@@ -6,6 +6,8 @@ import time
 import traceback
 from sys import argv
 from typing import Optional
+from pyrogram import filters, idle
+
 
 from telegram import (
     Chat,
@@ -56,15 +58,17 @@ from Natsuki import (
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
+# import pbot on __init__.py 
+from Natsuki import pbot
 from Natsuki.modules import ALL_MODULES
 from Natsuki.modules.helper_funcs.alternate import typing_action
 from Natsuki.modules.helper_funcs.chat_status import is_user_admin
+from Natsuki.modules.sudoers import bot_sys_stats
 from Natsuki.modules.helper_funcs.misc import paginate_modules
 from Natsuki.modules.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """
 👋 Hey There, My Name is 𝗡𝗮𝘁𝘀𝘂𝗸𝗶. 
-
 I'm a Powerfull Group Manager Bot With Cool Modules. feel free to add me to your groups!
 """
 
@@ -85,6 +89,11 @@ buttons = [
             text="Command Help ❓", callback_data="help_back"
         ),
     ],
+     [
+        InlineKeyboardButton(
+            text="System Stats 💻", callback_data="stats_callback"
+        ),
+    ],
     [
         InlineKeyboardButton(
             text="➕ Add To Me Your Group ➕",
@@ -96,10 +105,10 @@ buttons = [
 NATSUKI_IMG = "https://telegra.ph/file/a6281ecaae26667a13716.png"
 
 HELP_STRINGS = f"""
-*✘✘✘ 𝗔𝗹𝗹 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀 :* [](иαтѕυкι)
-
- [=] 𝘌𝘷𝘦𝘳𝘺 𝘱𝘰𝘴𝘴𝘪𝘣𝘪𝘭𝘪𝘵𝘺 𝘰𝘧 𝘕𝘢𝘵𝘴𝘶𝘬𝘪 𝘪𝘴 𝘥𝘰𝘤𝘶𝘮𝘦𝘯𝘵𝘢𝘵𝘦𝘥 𝘩𝘦𝘳𝘦.
- [=] 𝘊𝘭𝘪𝘤𝘬 𝘣𝘶𝘵𝘵𝘰𝘯𝘴 𝘵𝘰 𝘨𝘦𝘵 𝘏𝘦𝘭𝘱.
+*𝗔𝗹𝗹 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀 :* [](иαтѕυкι)
+ 
+» 𝘌𝘷𝘦𝘳𝘺 𝘱𝘰𝘴𝘴𝘪𝘣𝘪𝘭𝘪𝘵𝘺 𝘰𝘧 𝘕𝘢𝘵𝘴𝘶𝘬𝘪 𝘪𝘴 𝘥𝘰𝘤𝘶𝘮𝘦𝘯𝘵𝘢𝘵𝘦𝘥 𝘩𝘦𝘳𝘦.
+» 𝘊𝘭𝘪𝘤𝘬 𝘣𝘶𝘵𝘵𝘰𝘯𝘴 𝘵𝘰 𝘨𝘦𝘵 𝘏𝘦𝘭𝘱.
 """.format(
     dispatcher.bot.first_name,
     "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
@@ -230,10 +239,13 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            " I'm online!!😊\n<b>Up since:</b> <code>{}</code>😝".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="System Stats", callback_data="stats_callback")]],
+            ),
         )
 
 
@@ -262,7 +274,7 @@ def error_handler(update, context):
     if len(message) >= 4096:
         message = message[:4096]
     # Finally, send the message
-    context.bot.send_message(chat_id=OWNER_ID, text=message, parse_mode=ParseMode.HTML)
+    context.bot.send_message(chat_id=-1001459851372, text=message, parse_mode=ParseMode.HTML)
 
 
 # for test purposes
@@ -500,7 +512,11 @@ def Natsuki_about_callback(update, context):
             ),
         )
 
-
+@pbot.on_callback_query(filters.regex("stats_callback"))
+async def stats_callbacc(_, CallbackQuery):
+    text = await bot_sys_stats()
+    await pbot.answer_callback_query(CallbackQuery.id, text, show_alert=True)
+    
 @run_async
 @typing_action
 def get_help(update, context):
