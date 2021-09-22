@@ -76,7 +76,7 @@ I'm a Powerfull Group Manager Bot With Cool Modules. feel free to add me to your
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕ Add Sophia to your Group ➕",  url="t.me/TheNatsukiBot?startgroup=true",),
+            text="➕ Add Me to your Group ➕",  url="t.me/TheNatsukiBot?startgroup=true",),
     ],
     [
         InlineKeyboardButton(
@@ -84,9 +84,9 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="🙋‍♀️ Sophia News", url=f"https://t.me/dihanofficial"),
+        InlineKeyboardButton(text="Natsuki News 🙋‍♀️", url=f"https://t.me/Natsuki_Updates"),
         InlineKeyboardButton(
-            text="💬 Support Group", url=f"https://t.me/dihan_official"
+            text="Support Group 💬 ", url=f"https://t.me/NatsukiSupport_Official"
         ),
     ],
     [
