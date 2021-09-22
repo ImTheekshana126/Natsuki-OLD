@@ -177,7 +177,7 @@ async def restart_bot(dyno):
     if dyno.sender_id == OWNER_ID:
         pass
     else:
-        return await dyno.reply("ඔයාට වැඩ නෑ 😝"
+        return await dyno.reply("Don't Try it Not Working For You ❌"
          )
     args = [sys.executable, "-m", "Natsuki"]
     os.execl(sys.executable, *args)
