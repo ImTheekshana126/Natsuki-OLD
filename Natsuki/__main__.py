@@ -239,12 +239,12 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            " I'm online!!😊\n<b>Up since:</b> <code>{}</code>😝".format(
+            " I'm online!!✨\n<b>Up since:</b> <code>{}</code>✨".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="System Stats", callback_data="help_back")]],
+                [[InlineKeyboardButton(text="Command Help ❓", callback_data="help_back")]],
             ),
         )
 
