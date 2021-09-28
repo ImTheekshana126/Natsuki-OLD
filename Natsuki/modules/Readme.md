@@ -17,4 +17,4 @@ __help__ = """
 """
 __mod_name__ = "Natsuki"
 ```
-Don't Add Soace To Help , Okay 
+Don't Add Space To Help , Okay 
