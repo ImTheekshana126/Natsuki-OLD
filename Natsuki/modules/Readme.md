@@ -1,4 +1,4 @@
-## TheNatsukiBot Example plugin format
+## TheNatsukiBot Example plugin format 📌
 ```python3
 from Natsuki.decorator import register
 from .utils.disable import disableable_dec
@@ -17,3 +17,4 @@ __help__ = """
 """
 __mod_name__ = "Natsuki"
 ```
+Don't Add Soace To Help , Okay 
